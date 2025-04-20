@@ -5,18 +5,15 @@ public class Title {
     public String title;
     public int releaseDate = 0;
     public int durationInMinutes = 0;
-    public boolean includedInThePlan = false;
-    private int sumOfRatings = 0;
+    private boolean includedInThePlan = false;
     public double totalRating = 0.0;
-    public String printMovieDetails;
+    public String PrintMovieDetails;
     public double rating = 0.0;
 
-    public void setSumOfRatings(int sumOfRatings) {
-        this.sumOfRatings = sumOfRatings;
-    }
+    //*********************************************************************\\
 
     public double getTotalRating() {
-        return totalRating;
+        return rating ;
     }
 
     public double getRating() {
@@ -28,7 +25,7 @@ public class Title {
     }
 
     public String getPrintMovieDetails() {
-        return printMovieDetails;
+        return PrintMovieDetails;
     }
 
     public String getTitle() {
@@ -47,14 +44,11 @@ public class Title {
         return includedInThePlan;
     }
 
-    public int getSumOfRatings() {
-        return sumOfRatings;
-    }
 
-
+//*********************************************************************\\
 
     public void setPrintMovieDetails(String printMovieDetails) {
-        this.printMovieDetails = printMovieDetails;
+        this.PrintMovieDetails = printMovieDetails;
     }
 
     public void setTitle(String title) {
@@ -73,20 +67,18 @@ public class Title {
         this.includedInThePlan = includedInThePlan;
     }
 
-
-
     public void setTotalRating(double totalRating) {
         this.totalRating = totalRating;
     }
 
+
+    //*********************************************************************\\
     void printMovieDetails() {
         System.out.println("Movie Title: " + title);
         System.out.println("Release Date: " + releaseDate);
         System.out.println("Duration: " + getDurationInMinutes()+ " minutes");
         System.out.println("Included in the plan: " + (includedInThePlan ? "Yes" : "No"));
     }
-
-
 
     void Ratings (double rating) {
         totalRating += rating;

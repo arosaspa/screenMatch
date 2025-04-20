@@ -1,8 +1,13 @@
 package com.java.screenMatch.models;
 
-public class Movies extends Title {
+
+import com.java.screenMatch.calc.classification;
+
+public class Movies extends Title implements classification {
 
     private String director;
+    //***\\
+    // Constructor get and sette
 
     public String getDirector() {
         return director;
@@ -16,4 +21,8 @@ public class Movies extends Title {
     }
 
 
+    @Override
+    public int getClassification() {
+        return (int) getTotalRating() / 2;
+    }
 }
